@@ -1,0 +1,39 @@
+1)For the first option, if we comment 'using namespace std' we get 
+these errors:
+
+A)In file testcritter.cpp:
+
+a) We get that string is undefined
+b) writing 'Cout' and 'Cin' in not allowed (saying undeclared)
+c) endl is also considered as undefined
+d)getline is also considered undefined, as well as 'name'.
+
+B)In file Critter.cpp:
+
+a)The variable called 'setName' declared void (because the parameter is not defined)
+b)newname undeclared (because it is a string which is unknown)
+
+The reason:
+We get them since they are defined in ("namespace std") and therefore,
+removing the line or commenting it, will give the commands no meaning,
+therefore they will not do anything.
+
+The solution:
+To solve the erros caused by this, we have to put in front of each one of
+the codes above 'std::' in front, resulting in the code to work as good as 
+before.
+
+2)For the second option, if we remove Critter:: before the function getHunger
+in file Critter.cpp, we get the error:
+
+a)'hunger' was not declared in this scope.
+
+The reason:
+the function returns hunger which was declared as a private variable,
+which is a special one since it cant be accessed normally as other public
+variables.
+
+The solution:
+We easily declare the func as a public one in Critter.h, add a void one in testcritter.cpp
+and remove the one from Critter.cpp 
+
