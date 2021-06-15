@@ -1,0 +1,4 @@
+Sum is: 12.000000
+difference is: -1.000000
+Product is: 35.750000
+Division is: 0.846154
